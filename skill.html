@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRINN</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    
+.container{
+  width: 50%;
+  margin: 0 auto;
+}
+@keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-webkit-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-moz-keyframes load{
+  from {
+    width: 0%
+  }
+}
+@-o-keyframes load{
+  from {
+    width: 0%
+  }
+}
+
+.bar{
+  background-color: #EEE;
+  padding: 2px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  margin-top: 10%;
+}
+.bar::before{
+  content:  attr(data-skill);
+  background-color: #ffcc33;
+  display: inline-block;
+  padding: 5px 0 5px 10px;
+  border-radius: inherit;
+  animation: load 2s 0s;
+  -webkit-animation: load 2s 0s;
+  -moz-animation: load 2s 0s;
+  -o-animation: load 2s 0s;
+}
+
+.bar.front::before{
+  background-color: #ffcc33;
+}
+.bar.back::before{
+  background-color: #ffcc33;
+}
+
+.bar.learning::before{
+  width: calc(20% - 10px);
+}
+.bar.basic::before{
+  width: calc(40% - 10px);
+}
+.bar.intermediate::before{
+  width: calc(60% - 10px);
+}
+.bar.advanced::before{
+  width: calc(80% - 10px);
+}
+.bar.expert::before{
+  width: calc(100% - 10px);
+}
+
+  </style>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-transparent bg-body-tertiary transparent-navbar"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler btn btn-outline-light bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="color: rgb(255, 196, 2)"
+                aria-current="page"
+                href="index.html"
+                >Personal</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="color: aliceblue"
+                href="skill.html"
+                >Skills</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="color: aliceblue"
+                href="contact.html"
+                >Contacts</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="color: aliceblue"
+                href="Projects.html"
+                >Projects</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="contain col-sm-2">
+        <div class="mask">
+          <img
+            class="float-image"
+            src="images/profile.png"
+            style="width: 300px"
+            alt=""
+          />
+        </div>
+        <div class="text">
+          <p style="font-size: 2rem">Aldrin T. Eyana</p>
+          <p style="font-size: 1rem">
+            <span
+              ><i style="color: #ffd900" class="fa-solid fa-location-dot"></i
+            ></span>
+            San Francisco, Agusan del Sur <br />
+            <i style="color: #ffd900" class="fa-solid fa-phone"></i> 09518189613
+            <br />
+          </p>
+        </div>
+        <a href="images/RESUME.pdf" download>
+          <button class="download">Download CV</button>
+        </a>
+      </div>
+      <div class="content col-md-6 mx-auto d-block img-fluid ">
+        <div class="scrollable-content row">
+          
+          <div class="container">
+            <h1>Skill Set</h1>
+            <div class="bar learning" data-skill="AnguLar"></div>
+            <div class="bar back basic" data-skill="PHP"></div>
+            <div class="bar back intermediate" data-skill="JAVASCRIPT"></div>
+            <div class="bar front advanced" data-skill="CSS"></div>
+            <div class="bar front expert" data-skill="HTML5"></div>
+        
+          </div>
+        
+
+          
+
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="https://www.facebook.com/aldrineyana98">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="https://twitter.com/eyanaaldrin">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="https://www.linkedin.com/in/aldrin-eyana-1335ba26b/">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="https://www.instagram.com/aldrineyana/">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+     
+      <p>&copy;2023 Aldrin Eyana | All Rights Reserved</p>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a11b4a0d33.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

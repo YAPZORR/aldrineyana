@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRINN</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  .visuallyhidden {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    opacity: 0;
+    
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+    margin-top: 1em;
+  }
+  
+  .container {
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 2em;
+    background: rgba(0,0,0,.1);
+    
+  }
+  
+  .card-carousel {
+    --card-width: 100%;
+    --card-max-width: 100%;
+    --card-height: 350px;
+    --carousel-min-width: 900px;
+    z-index: 2;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: var(--card-height);
+    min-width: var(--carousel-min-width);
+    transition: filter .3s ease;
+    
+  }
+  
+  @media screen and (max-width: 640px) {
+   
+  }
+
+  @media screen and (max-width: 768px) {
+  /* CSS rules for mobile or smaller screens */
+  .card-carousel {
+      
+    position: absolute;
+
+    }
+    .scrollable-contentt {
+  /* Enable vertical scrolling */
+ /* Set a maximum height for the scrollable area */
+
+  width: 100%;
+  position: absolute;
+  
+  
+}
+}
+  
+  
+  .card-carousel.smooth-return {
+    transition: all .2s ease;
+  }
+  
+  .card-carousel .card {
+    background: whitesmoke;
+   
+    max-width: 60%;
+    text-align: center;
+    padding: 1em;
+    min-width: 250px;
+    height: 500px;
+    position: absolute;
+    margin: 0 auto;
+    color: rgba(0,0,0,.5);
+    transition: inherit;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 1em;
+    filter: brightness(.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+
+
+
+
+  }
+  
+  .card.highlight {
+    filter: brightness(1)
+  }
+  
+  
+  .card:nth-of-type(1) .image-container {
+      background-image: url("images/mobile-project-2.png");
+  }
+   
+  .card:nth-of-type(2) .image-container {
+    background-image: url("images/web-project-2.png")
+  }
+  
+  .card:nth-of-type(3) .image-container {
+    background-image: url("images/system.png")
+  }
+  .card:nth-of-type(4) .image-container {
+    background-image: url("images/system2.png")
+  }
+  .card:nth-of-type(5) .image-container {
+    background-image: url("images/ui-project-1.png")
+  }
+  
+  
+  
+  .image-container {
+    width: 20em;
+    height: 15em;
+    position: relative;
+    background-size: cover;
+    margin-bottom: 2em;
+   
+    padding: 1em;
+    -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+  box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+    
+  }
+  
+  .image-container::after {
+    content: "";
+    display: block;
+    width: 120%;
+    height: 120%;
+    border: solid 3px rgba(0,0,0,.1);
+    border-radius: 100%;
+    position: absolute;
+    top: calc(-10% - 3px);
+    left: calc(-10% - 3px);
+  }
+  
+  h2 {
+    padding: 1em;
+    margin-top: 1em;
+    background: rgba(0,0,0,.3);
+    text-align: center;
+    color: white;
+    border-radius: .2em;
+    display: inline-block;
+    transform: translateX(calc((100vw - 100%) / 2))
+  }
+  
+  h2 a {
+    color: #f5b916
+  }
+  .aboutdiv{
+    width: 100%;
+    height: 100%;
+  }
+  .scrollable-contentt {
+  /* Enable vertical scrolling */
+  height: 80%; /* Set a maximum height for the scrollable area */
+
+  width: 150%;
+  position: absolute;
+  
+  
+}
+.containn {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    350deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 19, 121, 1) 44%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  height: 700px;
+  width: 330px;
+  border-radius: 30px;
+position: absolute;
+  margin-left: 10%;
+}
+@media screen and (max-width: 768px) {
+  .card-carousel {
+   /* Change from absolute to relative */
+    height: auto; /* Remove fixed height */
+    min-width: auto; /* Remove minimum width */
+  }
+
+  .card-carousel .card {
+    max-width: 100%; /* Adjust maximum width */
+    height: auto; /* Remove fixed height */
+    margin-bottom: 2em; /* Add margin for spacing */
+
+  margin-top: 40%;
+  }
+
+  .image-container {
+    width: 100%; /* Adjust width */
+    height: 200px; /* Set a specific height or adjust as needed */
+    margin-bottom: 1em; /* Add margin for spacing */
+  }
+
+  h2 {
+    transform: none; /* Remove translation */
+  }
+  
+  .containn {
+    width: 80%; /* Adjust width */
+    height: auto; /* Remove fixed height */
+    position: relative; /* Change from absolute to relative */
+  }
+  
+  .scrollable-contentt {
+    height: auto; /* Remove fixed height */
+    width: 100%; /* Adjust width */
+    position: relative; /* Change from absolute to relative */
+  }
+}
+/* CSS */
+.button-34 {
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+  </style>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-transparent bg-body-tertiary transparent-navbar"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button
+          class="navbar-toggler btn btn-outline-light bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="color: aliceblue"
+                aria-current="page"
+                href="index.html"
+                >Personal</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="color: aliceblue"
+                href="skill.html"
+                >Skills</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="color: aliceblue"
+                href="contact.html"
+                >Contacts</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="color: rgb(255, 196, 2)"
+                href="Projects.html"
+                >Projects</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="containn col-sm-2">
+        <div class="mask">
+          <img
+            class="float-image"
+            src="images/profile.png"
+            style="width: 300px"
+            alt=""
+          />
+        </div>
+        <div class="text">
+          <p style="font-size: 2rem">Aldrin T. Eyana</p>
+          <p style="font-size: 1rem">
+            <span
+              ><i style="color: #ffd900" class="fa-solid fa-location-dot"></i
+            ></span>
+            San Francisco, Agusan del Sur <br />
+            <i style="color: #ffd900" class="fa-solid fa-phone"></i> 09518189613
+            <br />
+          </p>
+        </div>
+        <a href="images/RESUME.pdf" download>
+          <button class="download">Download CV</button>
+        </a>
+      </div>
+      <div class="content col-md-6 mx-lg-auto d-block img-fluid">
+        <div class="scrollable-contentt row">
+          <div class="aboutdiv col-sm-10">
+
+            
+
+            <div class="">
+              <div class="card-carousel">
+                <div class="card" id="1">
+                  <div class="image-container"></div>
+                  <p>Meet new and interesting dogs nearby.</p>
+                  <!-- HTML !-->
+                  <a href="https://yapzorr.github.io/ilvpet/"><button class="button-34" role="button">Visit page</button></a>
+
+
+
+                </div>
+                <div class="card" id="2">
+                  <div class="image-container"></div>
+                  <p>Online Appointment System for Counseling, ASSCAT-Related Documents, and Consultation.</p>
+                  <a href="https://app.dinagatislandtour.com/"><button class="button-34" role="button">Visit page</button></a>
+                </div>
+                <div class="card" id="3">
+                  <div class="image-container"></div>
+                  <p>Student Services encompass various systems within ASSCAT that support students throughout their academic journey.</p>
+                  <a href="https://asscat.systems/"><button class="button-34" role="button">Visit page</button></a>
+                </div>  
+                <div class="card" id="4">
+                  <div class="image-container"></div>
+                  <p>Student Services encompass various systems within ASSCAT that support students throughout their academic journey.</p>
+                </div>
+                <div class="card" id="5">
+                  <div class="image-container"></div>
+                  <p>Online Appointment System for Counseling, ASSCAT-Related Documents, and Consultation.</p>
+                  
+                </div>
+              </div>
+              <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
+            </div>
+            <!-- 
+            <h2>Check out <a target="_blank" href="https://codepen.io/WillyW/pen/RwRrvjv">Circle Carousel</a></h2> -->
+            
+          </div>
+
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="https://www.facebook.com/aldrineyana98">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="https://twitter.com/eyanaaldrin">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="https://www.linkedin.com/in/aldrin-eyana-1335ba26b/">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="https://www.instagram.com/aldrineyana/">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+     
+      <p>&copy;2023 Aldrin Eyana | All Rights Reserved</p>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a11b4a0d33.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+<script>const cardsContainer = document.querySelector(".card-carousel");
+const cardsController = document.querySelector(".card-carousel + .card-controller")
+
+class DraggingEvent {
+  constructor(target = undefined) {
+    this.target = target;
+  }
+  
+  event(callback) {
+    let handler;
+    
+    this.target.addEventListener("mousedown", e => {
+      e.preventDefault()
+      
+      handler = callback(e)
+      
+      window.addEventListener("mousemove", handler)
+      
+      document.addEventListener("mouseleave", clearDraggingEvent)
+      
+      window.addEventListener("mouseup", clearDraggingEvent)
+      
+      function clearDraggingEvent() {
+        window.removeEventListener("mousemove", handler)
+        window.removeEventListener("mouseup", clearDraggingEvent)
+      
+        document.removeEventListener("mouseleave", clearDraggingEvent)
+        
+        handler(null)
+      }
+    })
+    
+    this.target.addEventListener("touchstart", e => {
+      handler = callback(e)
+      
+      window.addEventListener("touchmove", handler)
+      
+      window.addEventListener("touchend", clearDraggingEvent)
+      
+      document.body.addEventListener("mouseleave", clearDraggingEvent)
+      
+      function clearDraggingEvent() {
+        window.removeEventListener("touchmove", handler)
+        window.removeEventListener("touchend", clearDraggingEvent)
+        
+        handler(null)
+      }
+    })
+  }
+  
+  // Get the distance that the user has dragged
+  getDistance(callback) {
+    function distanceInit(e1) {
+      let startingX, startingY;
+      
+      if ("touches" in e1) {
+        startingX = e1.touches[0].clientX
+        startingY = e1.touches[0].clientY
+      } else {
+        startingX = e1.clientX
+        startingY = e1.clientY
+      }
+      
+
+      return function(e2) {
+        if (e2 === null) {
+          return callback(null)
+        } else {
+          
+          if ("touches" in e2) {
+            return callback({
+              x: e2.touches[0].clientX - startingX,
+              y: e2.touches[0].clientY - startingY
+            })
+          } else {
+            return callback({
+              x: e2.clientX - startingX,
+              y: e2.clientY - startingY
+            })
+          }
+        }
+      }
+    }
+    
+    this.event(distanceInit)
+  }
+}
+
+
+class CardCarousel extends DraggingEvent {
+  constructor(container, controller = undefined) {
+    super(container)
+    
+    // DOM elements
+    this.container = container
+    this.controllerElement = controller
+    this.cards = container.querySelectorAll(".card")
+    
+    // Carousel data
+    this.centerIndex = (this.cards.length - 1) / 2;
+    this.cardWidth = this.cards[0].offsetWidth / this.container.offsetWidth * 100
+    this.xScale = {};
+    
+    // Resizing
+    window.addEventListener("resize", this.updateCardWidth.bind(this))
+    
+    if (this.controllerElement) {
+      this.controllerElement.addEventListener("keydown", this.controller.bind(this))      
+    }
+
+    
+    // Initializers
+    this.build()
+    
+    // Bind dragging event
+    super.getDistance(this.moveCards.bind(this))
+  }
+  
+  updateCardWidth() {
+    this.cardWidth = this.cards[0].offsetWidth / this.container.offsetWidth * 100
+    
+    this.build()
+  }
+  
+  build(fix = 0) {
+    for (let i = 0; i < this.cards.length; i++) {
+      const x = i - this.centerIndex;
+      const scale = this.calcScale(x)
+      const scale2 = this.calcScale2(x)
+      const zIndex = -(Math.abs(i - this.centerIndex))
+      
+      const leftPos = this.calcPos(x, scale2)
+     
+      
+      this.xScale[x] = this.cards[i]
+      
+      this.updateCards(this.cards[i], {
+        x: x,
+        scale: scale,
+        leftPos: leftPos,
+        zIndex: zIndex
+      })
+    }
+  }
+  
+  
+  controller(e) {
+    const temp = {...this.xScale};
+      
+      if (e.keyCode === 39) {
+        // Left arrow
+        for (let x in this.xScale) {
+          const newX = (parseInt(x) - 1 < -this.centerIndex) ? this.centerIndex : parseInt(x) - 1;
+
+          temp[newX] = this.xScale[x]
+        }
+      }
+      
+      if (e.keyCode == 37) {
+        // Right arrow
+        for (let x in this.xScale) {
+          const newX = (parseInt(x) + 1 > this.centerIndex) ? -this.centerIndex : parseInt(x) + 1;
+
+          temp[newX] = this.xScale[x]
+        }
+      }
+      
+      this.xScale = temp;
+      
+      for (let x in temp) {
+        const scale = this.calcScale(x),
+              scale2 = this.calcScale2(x),
+              leftPos = this.calcPos(x, scale2),
+              zIndex = -Math.abs(x)
+
+        this.updateCards(this.xScale[x], {
+          x: x,
+          scale: scale,
+          leftPos: leftPos,
+          zIndex: zIndex
+        })
+      }
+  }
+  
+  calcPos(x, scale) {
+    let formula;
+    
+    if (x < 0) {
+      formula = (scale * 100 - this.cardWidth) / 2
+      
+      return formula
+
+    } else if (x > 0) {
+      formula = 100 - (scale * 100 + this.cardWidth) / 2
+      
+      return formula
+    } else {
+      formula = 100 - (scale * 100 + this.cardWidth) / 2
+      
+      return formula
+    }
+  }
+  
+  updateCards(card, data) {
+    if (data.x || data.x == 0) {
+      card.setAttribute("data-x", data.x)
+    }
+    
+    if (data.scale || data.scale == 0) {
+      card.style.transform = `scale(${data.scale})`
+
+      if (data.scale == 0) {
+        card.style.opacity = data.scale
+      } else {
+        card.style.opacity = 1;
+      }
+    }
+   
+    if (data.leftPos) {
+      card.style.left = `${data.leftPos}%`        
+    }
+    
+    if (data.zIndex || data.zIndex == 0) {
+      if (data.zIndex == 0) {
+        card.classList.add("highlight")
+      } else {
+        card.classList.remove("highlight")
+      }
+      
+      card.style.zIndex = data.zIndex  
+    }
+  }
+  
+  calcScale2(x) {
+    let formula;
+   
+    if (x <= 0) {
+      formula = 1 - -1 / 5 * x
+      
+      return formula
+    } else if (x > 0) {
+      formula = 1 - 1 / 5 * x
+      
+      return formula
+    }
+  }
+  
+  calcScale(x) {
+    const formula = 1 - 1 / 5 * Math.pow(x, 2)
+    
+    if (formula <= 0) {
+      return 0 
+    } else {
+      return formula      
+    }
+  }
+  
+  checkOrdering(card, x, xDist) {    
+    const original = parseInt(card.dataset.x)
+    const rounded = Math.round(xDist)
+    let newX = x
+    
+    if (x !== x + rounded) {
+      if (x + rounded > original) {
+        if (x + rounded > this.centerIndex) {
+          
+          newX = ((x + rounded - 1) - this.centerIndex) - rounded + -this.centerIndex
+        }
+      } else if (x + rounded < original) {
+        if (x + rounded < -this.centerIndex) {
+          
+          newX = ((x + rounded + 1) + this.centerIndex) - rounded + this.centerIndex
+        }
+      }
+      
+      this.xScale[newX + rounded] = card;
+    }
+    
+    const temp = -Math.abs(newX + rounded)
+    
+    this.updateCards(card, {zIndex: temp})
+
+    return newX;
+  }
+  
+  moveCards(data) {
+    let xDist;
+    
+    if (data != null) {
+      this.container.classList.remove("smooth-return")
+      xDist = data.x / 250;
+    } else {
+
+      
+      this.container.classList.add("smooth-return")
+      xDist = 0;
+
+      for (let x in this.xScale) {
+        this.updateCards(this.xScale[x], {
+          x: x,
+          zIndex: Math.abs(Math.abs(x) - this.centerIndex)
+        })
+      }
+    }
+
+    for (let i = 0; i < this.cards.length; i++) {
+      const x = this.checkOrdering(this.cards[i], parseInt(this.cards[i].dataset.x), xDist),
+            scale = this.calcScale(x + xDist),
+            scale2 = this.calcScale2(x + xDist),
+            leftPos = this.calcPos(x + xDist, scale2)
+      
+      
+      this.updateCards(this.cards[i], {
+        scale: scale,
+        leftPos: leftPos
+      })
+    }
+  }
+}
+
+const carousel = new CardCarousel(cardsContainer)</script>
