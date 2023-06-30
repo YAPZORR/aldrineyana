@@ -194,4 +194,32 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
+ 
+
+
+  <script>
+     // Function to update the viewer count
+function updateViewerCount() {
+  // Check if the viewer count is already stored in local storage
+  if (localStorage.getItem('viewerCount')) {
+    // Retrieve the current count from local storage
+    var count = parseInt(localStorage.getItem('viewerCount'));
+    
+    // Increment the count by 1
+    count += 1;
+    
+    // Update the count in local storage
+    localStorage.setItem('viewerCount', count.toString());
+  } else {
+    // Initialize the count to 1 and store it in local storage
+    localStorage.setItem('viewerCount', '1');
+  }
+}
+
+// Call the function to update the viewer count
+updateViewerCount();
+
+// Display the viewer count only to you
+console.log('Viewer count: ' + localStorage.getItem('viewerCount'));
+  </script>
 </html>
